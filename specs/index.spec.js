@@ -34,16 +34,16 @@ describe("isOutOfWorkingHours function", () => {
 });
 
 describe("calculateDueDate function", () => {
-    it("it should returns Can't submit on weekends!", () => {
-      const result = index.calculateDueDate(weekend);
-      assert.strictEqual(result, "Can't submit on weekends!");
-    });
-    it("it should returns Can't submit out of working hours!", () => {
-      const result = index.calculateDueDate(outOfWorkingHours);
-      assert.strictEqual(result, "Can't submit out of working hours!");
-    });
-    it("it should returns 2021.06.30:10:59", () => {
-      const result = index.calculateDueDate(inWorkingHours, 10);
-      assert.deepStrictEqual(result, new Date(Date.UTC(2021, 5, 30, 10, 59)));
-    });
+  it("it should returns Can't submit on weekends!", () => {
+    const result = index.calculateDueDate(weekend);
+    assert.strictEqual(result, "Can't submit on weekends!");
   });
+  it("it should returns Can't submit out of working hours!", () => {
+    const result = index.calculateDueDate(outOfWorkingHours);
+    assert.strictEqual(result, "Can't submit out of working hours!");
+  });
+  it("it should returns 2021.06.30:10:59", () => {
+    const result = index.calculateDueDate(inWorkingHours, 10);
+    assert.deepStrictEqual(result, new Date(Date.UTC(2021, 5, 30, 10, 59)));
+  });
+});
