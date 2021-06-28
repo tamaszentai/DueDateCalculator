@@ -21,27 +21,27 @@ const isOutOfWorkingHours = (date) => {
 // Main function
 
 const calculateDueDate = (date, turnaround) => {
-    const turnaroundInMinutes = turnaround * 60;
+  const turnaroundInMinutes = turnaround * 60;
 
-    if (isWeekend(date)) {
-        return 'Can\'t submit on weekends!';
-    }
+  if (isWeekend(date)) {
+    return "Can\'t submit on weekends!";
+  }
 
-    if (isOutOfWorkingHours(date)) {
-        return 'Can\'t submit out of working hours!';
-    }
+  if (isOutOfWorkingHours(date)) {
+    return "Can\'t submit out of working hours!";
+  }
 
-    let counter = 0;
-    while (counter < turnaroundInMinutes) {
-        if (isWeekend(date) || isOutOfWorkingHours(date)) {
-            date.setUTCMinutes(date.getUTCMinutes() + 1);
-        } else {
-            date.setUTCMinutes(date.getUTCMinutes() + 1);
-            counter++;
-        }
+  let counter = 0;
+  while (counter < turnaroundInMinutes) {
+    if (isWeekend(date) || isOutOfWorkingHours(date)) {
+      date.setUTCMinutes(date.getUTCMinutes() + 1);
+    } else {
+      date.setUTCMinutes(date.getUTCMinutes() + 1);
+      counter++;
     }
-    return date;
-}
+  }
+  return date;
+};
 
 const inputDate = new Date(Date.UTC(2021, 5, 28, 16, 59));
 
