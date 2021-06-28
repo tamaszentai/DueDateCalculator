@@ -1,0 +1,14 @@
+{
+  "name": "take-home-challenge",
+  "version": "1.0.0",
+  "description": "Take Home Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "author": "Tamas Zentai",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^9.0.1"
+  }
+}
