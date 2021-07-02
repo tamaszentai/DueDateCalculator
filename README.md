@@ -15,8 +15,8 @@ Given coding homework to make a Due Date Calculator using the candidate's favori
   <li>Minutes: Minutes (0-59). Defaults to 0 if omitted.</li>
 </ul>
 <li>At line 48 the calculateDueDate function takes the inputDate and the turnaround value (hour)</li>
-<li>Run the calculator with following terminal command: node index.js</li>
-<li>Run the tests for the calculator with following terminal command: npm test</li>
+<li>Run the calculator with the following terminal command: node index.js</li>
+<li>Run the tests with the following terminal command: npm test</li>
 </ol>
 
 Used language: JavaScript(Node.js)
